@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700" style="background:#0a0e17; font-family:'Inter', sans-serif;">
+  <defs>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Studio Top Navigation -->
+  <rect x="20" y="20" width="1160" height="60" rx="12" fill="#111827" stroke="rgba(255,255,255,0.1)"/>
+  <rect x="35" y="32" width="36" height="36" rx="8" fill="url(#headerGrad)"/>
+  <text x="53" y="56" fill="#fff" font-size="18" font-weight="bold" text-anchor="middle">RL</text>
+  <text x="85" y="48" fill="#fff" font-size="16" font-weight="bold">RateLimit Pro Studio</text>
+  <text x="85" y="65" fill="#9ca3af" font-size="11">Production Rate Limiting Engine &amp; Redis Code Synthesizer</text>
+
+  <!-- Preset Buttons -->
+  <rect x="850" y="35" width="100" height="30" rx="6" fill="#2563eb"/>
+  <text x="900" y="55" fill="#fff" font-size="11" font-weight="600" text-anchor="middle">AI API</text>
+  <rect x="960" y="35" width="105" height="30" rx="6" fill="rgba(255,255,255,0.08)"/>
+  <text x="1012" y="55" fill="#9ca3af" font-size="11" font-weight="600" text-anchor="middle">FinTech Gateway</text>
+  <rect x="1075" y="35" width="90" height="30" rx="6" fill="rgba(255,255,255,0.08)"/>
+  <text x="1120" y="55" fill="#9ca3af" font-size="11" font-weight="600" text-anchor="middle">Flash Sale</text>
+
+  <!-- Left Column: Controls (Width 360) -->
+  <rect x="20" y="100" width="360" height="570" rx="12" fill="#111827" stroke="rgba(255,255,255,0.1)"/>
+  <text x="40" y="130" fill="#fff" font-size="14" font-weight="bold">Algorithm &amp; Parameters</text>
+  
+  <!-- Algorithm Select Dropdown -->
+  <rect x="40" y="150" width="320" height="38" rx="8" fill="rgba(0,0,0,0.5)" stroke="rgba(255,255,255,0.15)"/>
+  <text x="55" y="174" fill="#38bdf8" font-size="12">Token Bucket (Bursty + Refill)</text>
+
+  <!-- Sliders -->
+  <text x="40" y="215" fill="#9ca3af" font-size="12">Bucket Capacity (Max Burst): 20</text>
+  <line x1="40" y1="230" x2="360" y2="230" stroke="#3b82f6" stroke-width="4" stroke-linecap="round"/>
+
+  <text x="40" y="270" fill="#9ca3af" font-size="12">Refill Rate: 2.0 tokens/sec</text>
+  <line x1="40" y1="285" x2="250" y2="285" stroke="#3b82f6" stroke-width="4" stroke-linecap="round"/>
+  <line x1="250" y1="285" x2="360" y2="285" stroke="rgba(255,255,255,0.1)" stroke-width="4" stroke-linecap="round"/>
+
+  <text x="40" y="325" fill="#9ca3af" font-size="12">Cost per Request: 1 token</text>
+  <line x1="40" y1="340" x2="100" y2="340" stroke="#3b82f6" stroke-width="4" stroke-linecap="round"/>
+  <line x1="100" y1="340" x2="360" y2="340" stroke="rgba(255,255,255,0.1)" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Traffic Generator Box -->
+  <text x="40" y="400" fill="#fff" font-size="14" font-weight="bold">Traffic Generator</text>
+  <rect x="40" y="425" width="150" height="38" rx="8" fill="#2563eb"/>
+  <text x="115" y="449" fill="#fff" font-size="12" font-weight="600" text-anchor="middle">Send 1 Req</text>
+
+  <rect x="210" y="425" width="150" height="38" rx="8" fill="url(#headerGrad)"/>
+  <text x="285" y="449" fill="#fff" font-size="12" font-weight="600" text-anchor="middle">Fire Burst (30)</text>
+
+  <rect x="40" y="475" width="320" height="38" rx="8" fill="rgba(255,255,255,0.08)"/>
+  <text x="200" y="499" fill="#e5e7eb" font-size="12" font-weight="600" text-anchor="middle">Auto Stream (3 RPS)</text>
+
+  <!-- Right Column: KPI + Code Synthesizer (Width 780) -->
+  <g transform="translate(400, 100)">
+    <!-- KPI Row -->
+    <rect x="0" y="0" width="180" height="75" rx="10" fill="#111827" stroke="rgba(255,255,255,0.1)"/>
+    <text x="15" y="25" fill="#9ca3af" font-size="10">TOTAL REQUESTS</text>
+    <text x="15" y="55" fill="#38bdf8" font-size="22" font-weight="bold" font-family="'JetBrains Mono', monospace">120</text>
+
+    <rect x="195" y="0" width="180" height="75" rx="10" fill="#111827" stroke="rgba(255,255,255,0.1)"/>
+    <text x="210" y="25" fill="#9ca3af" font-size="10">ACCEPTED (200)</text>
+    <text x="210" y="55" fill="#10b981" font-size="22" font-weight="bold" font-family="'JetBrains Mono', monospace">84</text>
+
+    <rect x="390" y="0" width="180" height="75" rx="10" fill="#111827" stroke="rgba(255,255,255,0.1)"/>
+    <text x="405" y="25" fill="#9ca3af" font-size="10">BLOCKED (429)</text>
+    <text x="405" y="55" fill="#ef4444" font-size="22" font-weight="bold" font-family="'JetBrains Mono', monospace">36</text>
+
+    <rect x="585" y="0" width="195" height="75" rx="10" fill="#111827" stroke="rgba(255,255,255,0.1)"/>
+    <text x="600" y="25" fill="#9ca3af" font-size="10">ACCEPTANCE RATE</text>
+    <text x="600" y="55" fill="#f59e0b" font-size="22" font-weight="bold" font-family="'JetBrains Mono', monospace">70.0%</text>
+
+    <!-- Code Synthesizer Panel -->
+    <rect x="0" y="95" width="780" height="475" rx="12" fill="#111827" stroke="rgba(255,255,255,0.1)"/>
+    
+    <!-- Code Tabs -->
+    <rect x="15" y="110" width="120" height="32" rx="6" fill="rgba(255,255,255,0.15)"/>
+    <text x="75" y="131" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">Redis Lua</text>
+    <rect x="145" y="110" width="120" height="32" rx="6" fill="transparent"/>
+    <text x="205" y="131" fill="#9ca3af" font-size="11" text-anchor="middle">Node Express</text>
+    <rect x="275" y="110" width="120" height="32" rx="6" fill="transparent"/>
+    <text x="335" y="131" fill="#9ca3af" font-size="11" text-anchor="middle">Python FastAPI</text>
+    <rect x="405" y="110" width="120" height="32" rx="6" fill="transparent"/>
+    <text x="465" y="131" fill="#9ca3af" font-size="11" text-anchor="middle">Next.js Edge</text>
+    <rect x="535" y="110" width="100" height="32" rx="6" fill="transparent"/>
+    <text x="585" y="131" fill="#9ca3af" font-size="11" text-anchor="middle">Golang</text>
+
+    <!-- Code Editor Box -->
+    <rect x="15" y="155" width="750" height="350" rx="8" fill="#0d1117" stroke="rgba(255,255,255,0.05)"/>
+    <g transform="translate(30, 180)" font-family="'JetBrains Mono', monospace" font-size="11">
+      <text y="0" fill="#6a737d">-- RateLimit Pro: Atomic Redis Lua Token Bucket</text>
+      <text y="20" fill="#6a737d">-- Zero race conditions, atomic execution via EVALSHA</text>
+      <text y="50" fill="#ff7b72">local</text>
+      <text x="45" y="50" fill="#79c0ff">key</text>
+      <text x="75" y="50" fill="#ff7b72">=</text>
+      <text x="90" y="50" fill="#79c0ff">KEYS[1]</text>
+      <text y="75" fill="#ff7b72">local</text>
+      <text x="45" y="75" fill="#79c0ff">now</text>
+      <text x="75" y="75" fill="#ff7b72">=</text>
+      <text x="90" y="75" fill="#d2a8ff">tonumber</text>
+      <text x="150" y="75" fill="#79c0ff">(ARGV[1])</text>
+
+      <text y="105" fill="#ff7b72">local</text>
+      <text x="45" y="105" fill="#79c0ff">data</text>
+      <text x="80" y="105" fill="#ff7b72">=</text>
+      <text x="95" y="105" fill="#79c0ff">redis.call("HMGET", key, "tokens", "last_updated")</text>
+
+      <text y="135" fill="#ff7b72">if</text>
+      <text x="20" y="135" fill="#79c0ff">tokens == nil</text>
+      <text x="120" y="135" fill="#ff7b72">then</text>
+      <text x="30" y="155" fill="#79c0ff">tokens = capacity</text>
+      <text x="30" y="175" fill="#79c0ff">last_updated = now</text>
+      <text y="195" fill="#ff7b72">else</text>
+      <text x="30" y="215" fill="#79c0ff">local elapsed = math.max(0, now - last_updated)</text>
+      <text x="30" y="235" fill="#79c0ff">tokens = math.min(capacity, tokens + (elapsed * refill_rate))</text>
+      <text y="255" fill="#ff7b72">end</text>
+
+      <text y="290" fill="#ff7b72">return</text>
+      <text x="50" y="290" fill="#79c0ff">{ allowed, remaining, reset_in, retry_after }</text>
+    </g>
+  </g>
+</svg>

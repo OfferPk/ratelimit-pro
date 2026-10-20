@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600" style="background:#0a0e17; font-family:'Inter', sans-serif;">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="fillGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Title & Header -->
+  <rect x="30" y="30" width="940" height="70" rx="12" fill="#111827" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <rect x="50" y="45" width="40" height="40" rx="10" fill="url(#blueGrad)"/>
+  <text x="70" y="70" fill="#ffffff" font-size="20" font-weight="bold" text-anchor="middle">RL</text>
+  <text x="105" y="65" fill="#f9fafb" font-size="18" font-weight="700">RateLimit Pro — Traffic Timeline &amp; Header Inspector</text>
+  <text x="105" y="85" fill="#9ca3af" font-size="12">Token Bucket Simulation: Capacity 20, Refill 2.0/s</text>
+
+  <!-- Bucket Level Visualizer Card -->
+  <rect x="30" y="120" width="940" height="120" rx="12" fill="#111827" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <text x="55" y="150" fill="#f9fafb" font-size="14" font-weight="600">Current Token Bucket Level</text>
+  <text x="915" y="150" fill="#06b6d4" font-size="14" font-weight="700" font-family="'JetBrains Mono', monospace" text-anchor="end">14.2 / 20.0 tokens</text>
+  
+  <!-- Progress Bar Container -->
+  <rect x="55" y="165" width="890" height="28" rx="14" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)"/>
+  <rect x="55" y="165" width="630" height="28" rx="14" fill="url(#fillGrad)"/>
+  
+  <text x="55" y="215" fill="#9ca3af" font-size="12">0 (Empty / Exhausted)</text>
+  <text x="945" y="215" fill="#9ca3af" font-size="12" text-anchor="end">Max Burst Capacity: 20 tokens</text>
+
+  <!-- Traffic Stream Timeline -->
+  <rect x="30" y="260" width="940" height="150" rx="12" fill="#111827" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <text x="55" y="290" fill="#f9fafb" font-size="14" font-weight="600">Traffic Arrival Timeline (Last 50 Requests)</text>
+  <circle cx="820" cy="285" r="5" fill="#10b981"/>
+  <text x="830" y="290" fill="#9ca3af" font-size="12">200 OK</text>
+  <circle cx="890" cy="285" r="5" fill="#ef4444"/>
+  <text x="900" y="290" fill="#9ca3af" font-size="12">429 Blocked</text>
+
+  <!-- Timeline Bars -->
+  <g transform="translate(55, 310)">
+    <!-- 20 Accepted bars -->
+    <rect x="0" y="20" width="12" height="60" rx="3" fill="#10b981"/>
+    <rect x="18" y="20" width="12" height="60" rx="3" fill="#10b981"/>
+    <rect x="36" y="20" width="12" height="60" rx="3" fill="#10b981"/>
+    <rect x="54" y="20" width="12" height="60" rx="3" fill="#10b981"/>
+    <rect x="72" y="20" width="12" height="60" rx="3" fill="#10b981"/>
+    <rect x="90" y="20" width="12" height="60" rx="3" fill="#10b981"/>
+    <rect x="108" y="20" width="12" height="60" rx="3" fill="#10b981"/>
+    <rect x="126" y="20" width="12" height="60" rx="3" fill="#10b981"/>
+    <rect x="144" y="20" width="12" height="60" rx="3" fill="#10b981"/>
+    <rect x="162" y="20" width="12" height="60" rx="3" fill="#10b981"/>
+    <rect x="180" y="20" width="12" height="60" rx="3" fill="#10b981"/>
+    <rect x="198" y="20" width="12" height="60" rx="3" fill="#10b981"/>
+    <rect x="216" y="20" width="12" height="60" rx="3" fill="#10b981"/>
+    <rect x="234" y="20" width="12" height="60" rx="3" fill="#10b981"/>
+    <rect x="252" y="20" width="12" height="60" rx="3" fill="#10b981"/>
+    <rect x="270" y="20" width="12" height="60" rx="3" fill="#10b981"/>
+    <rect x="288" y="20" width="12" height="60" rx="3" fill="#10b981"/>
+    <rect x="306" y="20" width="12" height="60" rx="3" fill="#10b981"/>
+    <rect x="324" y="20" width="12" height="60" rx="3" fill="#10b981"/>
+    <rect x="342" y="20" width="12" height="60" rx="3" fill="#10b981"/>
+
+    <!-- Burst exhausts bucket: 10 Blocked 429 bars -->
+    <rect x="360" y="0" width="12" height="80" rx="3" fill="#ef4444"/>
+    <rect x="378" y="0" width="12" height="80" rx="3" fill="#ef4444"/>
+    <rect x="396" y="0" width="12" height="80" rx="3" fill="#ef4444"/>
+    <rect x="414" y="0" width="12" height="80" rx="3" fill="#ef4444"/>
+    <rect x="432" y="0" width="12" height="80" rx="3" fill="#ef4444"/>
+    <rect x="450" y="0" width="12" height="80" rx="3" fill="#ef4444"/>
+    <rect x="468" y="0" width="12" height="80" rx="3" fill="#ef4444"/>
+    <rect x="486" y="0" width="12" height="80" rx="3" fill="#ef4444"/>
+    <rect x="504" y="0" width="12" height="80" rx="3" fill="#ef4444"/>
+    <rect x="522" y="0" width="12" height="80" rx="3" fill="#ef4444"/>
+
+    <!-- Steady Refill allows occasional requests -->
+    <rect x="550" y="20" width="12" height="60" rx="3" fill="#10b981"/>
+    <rect x="570" y="0" width="12" height="80" rx="3" fill="#ef4444"/>
+    <rect x="600" y="20" width="12" height="60" rx="3" fill="#10b981"/>
+    <rect x="620" y="0" width="12" height="80" rx="3" fill="#ef4444"/>
+    <rect x="650" y="20" width="12" height="60" rx="3" fill="#10b981"/>
+  </g>
+
+  <!-- Live HTTP Headers Card -->
+  <rect x="30" y="430" width="940" height="140" rx="12" fill="#0d1117" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <rect x="30" y="430" width="940" height="35" rx="12" fill="rgba(255,255,255,0.03)"/>
+  <text x="50" y="453" fill="#f9fafb" font-size="13" font-weight="600">IETF RFC HTTP Response Headers</text>
+  <rect x="850" y="437" width="105" height="22" rx="4" fill="rgba(239,68,68,0.2)" stroke="rgba(239,68,68,0.4)"/>
+  <text x="902" y="453" fill="#f87171" font-size="11" font-family="'JetBrains Mono', monospace" font-weight="bold" text-anchor="middle">429 TOO MANY</text>
+
+  <!-- Headers table -->
+  <text x="50" y="490" fill="#60a5fa" font-family="'JetBrains Mono', monospace" font-size="12">RateLimit-Limit:</text>
+  <text x="250" y="490" fill="#e5e7eb" font-family="'JetBrains Mono', monospace" font-size="12">20</text>
+
+  <text x="50" y="515" fill="#60a5fa" font-family="'JetBrains Mono', monospace" font-size="12">RateLimit-Remaining:</text>
+  <text x="250" y="515" fill="#e5e7eb" font-family="'JetBrains Mono', monospace" font-size="12">0</text>
+
+  <text x="500" y="490" fill="#60a5fa" font-family="'JetBrains Mono', monospace" font-size="12">RateLimit-Reset:</text>
+  <text x="700" y="490" fill="#e5e7eb" font-family="'JetBrains Mono', monospace" font-size="12">1s</text>
+
+  <text x="500" y="515" fill="#f87171" font-family="'JetBrains Mono', monospace" font-size="12">Retry-After:</text>
+  <text x="700" y="515" fill="#f87171" font-family="'JetBrains Mono', monospace" font-weight="bold" font-size="12">1 (Backoff Required)</text>
+
+  <text x="50" y="545" fill="#60a5fa" font-family="'JetBrains Mono', monospace" font-size="12">RateLimit-Policy:</text>
+  <text x="250" y="545" fill="#e5e7eb" font-family="'JetBrains Mono', monospace" font-size="12">20;w=60</text>
+</svg>
